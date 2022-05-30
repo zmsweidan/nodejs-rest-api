@@ -1,0 +1,17 @@
+{
+    "username":"bbobson",
+    "firstName":"Bob",
+    "lastName":"Bobson",
+    "email":"Bob.Bobson@test.mail.com",
+    "active":true,
+    "lastLogin":"2019-05-08T12:12:11.796Z",
+    "roles":[
+       {
+          "$oid":"5cec1c421c9d440000028fde"
+       },
+       {
+          "$oid":"5ce6f57b1c9d440000382b13"
+       }
+    ]
+ }
+ 

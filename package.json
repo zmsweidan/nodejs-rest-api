@@ -1,0 +1,61 @@
+{
+  "name": "node_api_template",
+  "version": "2.2.0",
+  "description": "Node API template",
+  "main": "server.js",
+  "scripts": {
+    "start": "node .",
+    "tests": "set NODE_ENV=TEST&&mocha --exit",
+    "test-to-xml": "set NODE_ENV=TEST&&mocha test --exit -R ./node_modules/mocha-junit-reporter --reporter-options mochaFile=./test/reports/xml-report/test-results.xml",
+    "test-to-html": "set NODE_ENV=TEST&&mocha test --exit -R ./node_modules/mochawesome --reporter-options reportDir=./test/reports/mochawesome-report",
+    "open-html-tests": "cd mochawesome-report&&mochawesome.html",
+    "build": "build.bat"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "swagger/swagger-doc.json",
+      "data/scripts/destination"
+    ]
+  },
+  "author": "Zaid Sweidan",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "activedirectory": "^0.7.2",
+    "automapper-ts-node": "^1.0.2",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cors": "^2.8.5",
+    "custom-env": "^1.0.2",
+    "dotenv": "^8.1.0",
+    "edit-json-file": "^1.3.1",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.0.0",
+    "ip": "^1.1.5",
+    "json8-patch": "^0.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^1.6.0",
+    "mathjs": "^6.2.1",
+    "md5": "^2.2.1",
+    "mocha": "^6.2.0",
+    "mocha-junit-reporter": "^1.23.1",
+    "mongoosastic": "^4.5.1",
+    "mongoose": "^5.7.0",
+    "mongoose-to-swagger": "0.0.4",
+    "mongoose-type-email": "^1.0.11",
+    "node-cron": "^2.0.3",
+    "nodemailer": "^6.3.0",
+    "nodemon": "^1.19.2",
+    "request-ip": "^2.1.3",
+    "saslprep": "^1.0.3",
+    "sinon": "^7.4.2",
+    "swagger-ui-express": "^4.1.0",
+    "tslib": "^1.10.0",
+    "uuid": "^3.3.3",
+    "win-ca": "^3.1.0"
+  },
+  "engines": {
+    "node": ">= 8.9.4"
+  }
+}

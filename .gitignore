@@ -1,0 +1,8 @@
+node_modules/
+test/reports/mochawesome-report/
+test/reports/xml-report
+workspace.code-workspace
+package-lock.json
+swagger/swagger-doc*
+build
+.vscode
