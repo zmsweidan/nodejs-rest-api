@@ -15,7 +15,8 @@
     "ignore": [
       "swagger/swagger-doc.json",
       "data/scripts/destination"
-    ]
+    ],
+    "watch": ["*.js", "*.json", ".env"]
   },
   "author": "Zaid Sweidan",
   "license": "UNLICENSED",
