@@ -13,8 +13,8 @@ require('custom-env').env(process.env.NODE_ENV);
 require('dotenv').config({overwrite: true});
 process.env.HTTP_SERVER_URI = `http://${process.env.SERVER}:${process.env.HTTP_PORT}${process.env.APP_PATH}`;
 process.env.HTTPS_SERVER_URI = `https://${process.env.SERVER}:${process.env.HTTPS_PORT}${process.env.APP_PATH}`;
-process.env.CONNECTION_HOST = process.env.CONNECTION_URI.split('@')[1].split('/')[0];
-process.env.CONNECTION_USER = process.env.CONNECTION_URI.split('://')[1].split(':')[0];
+process.env.CONNECTION_HOST = process.env.CONNECTION_URI?.split('@')[1]?.split('/')[0];
+process.env.CONNECTION_USER = process.env.CONNECTION_URI?.split('://')[1]?.split(':')[0];
 
 // connect to database(s)
 if (process.env.MOCHA == 0) {
