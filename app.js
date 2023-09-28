@@ -52,7 +52,6 @@ if (process.env.AUTHORIZATION == 1) {
 
 app.use(`${BASE_PATH}/users`, authCheck, require('./controllers/user.controller'));
 app.use(`${BASE_PATH}/roles`, authCheck, require('./controllers/role.controller'));
-app.use(`${BASE_PATH}/emails`, authCheck, require('./controllers/email.controller'));
 // add more api paths here as nessecary...
 
 

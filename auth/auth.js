@@ -76,6 +76,5 @@ module.exports = {
     authenticateToken,
     authorize,
     getUsername,
-    getUserData,
-    TOKEN_FIELD_NAME
+    getUserData
 };
