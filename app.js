@@ -45,9 +45,12 @@ if (process.env.RATE_LIMITING == 1) {
  */
 const BASE_PATH = `${APP_PATH}/api/v${API_VERSION}`;
 
-var authCheck = process.env.AUTHENTICATION == 1 ? auth.authenticateToken : [];
-if (process.env.AUTHORIZATION == 1) {
-    authCheck = [auth.authenticateToken, auth.authorize];
+var authCheck = [];
+if (process.env.AUTHENTICATION == 1) {
+    authCheck = auth.authenticate;
+    if (process.env.AUTHORIZATION == 1) {
+        authCheck = [auth.authenticate, auth.authorize];
+    }
 }
 
 app.use(`${BASE_PATH}/users`, authCheck, require('./controllers/user.controller'));

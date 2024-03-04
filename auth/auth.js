@@ -23,6 +23,7 @@ const DB_USER = process.env.CONNECTION_USER;
  * @param {*} next 
  */
 function authorize(req, res, next) {
+    return next(new Error('Authorization mechanism not implemented yet!'));
 }
 
 
@@ -32,7 +33,8 @@ function authorize(req, res, next) {
  * @param {*} res 
  * @param {*} next 
  */
-function authenticateToken(req, res, next) {
+function authenticate(req, res, next) {
+    return next(new Error('Authentication mechanism not implemented yet!'));
 }
 
 
@@ -73,7 +75,7 @@ async function getUserData(request) {
 
 
 module.exports = {
-    authenticateToken,
+    authenticate,
     authorize,
     getUsername,
     getUserData
