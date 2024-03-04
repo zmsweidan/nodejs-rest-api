@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node .",
+    "local": "nodemon",
     "tests": "set NODE_ENV=TEST&&mocha --exit",
     "test-to-xml": "set NODE_ENV=TEST&&mocha test --exit -R ./node_modules/mocha-junit-reporter --reporter-options mochaFile=./test/reports/xml-report/test-results.xml",
     "test-to-html": "set NODE_ENV=TEST&&mocha test --exit -R ./node_modules/mochawesome --reporter-options reportDir=./test/reports/mochawesome-report",
